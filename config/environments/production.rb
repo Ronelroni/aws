@@ -49,5 +49,3 @@ Rails.application.configure do
 
   
 end
-server '52.72.137.220', user: 'app', roles: %w{app db web}
-set :ssh_options, keys: '/home/app/.ssh/id_rsa.pub'
