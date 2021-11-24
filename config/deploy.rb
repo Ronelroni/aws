@@ -1,21 +1,21 @@
 # config valid only for current version of Capistrano
 lock '3.16.0'
 # Nom de l'application à déployer
-set :application, 'achieve'
+set :application, 'AWS_App'
 # dépôt git à cloner
 # (Xxxxxxxx: nom d'utilisateur, yyyyyyyy: nom de l'application)
 set :repo_url, 'https://github.com/Ronelroni/aws.git'
 # deployするブランチ。デフォルトでmainを使用している場合、masterをmainに変更してください。
 set :branch, ENV['BRANCH'] || 'master'
 # Le répertoire dans lequel effectuer le déploiement.
-set :deploy_to, '/var/www/achieve'
+set :deploy_to, '/var/www/AWS_App'
 # Dossiers / fichiers avec liens symboliques
 set :linked_files, %w{.env config/secrets.yml}
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/uploads}
 # Nombre de versions à conserver (* décrit plus loin)
 set :keep_releases, 5
 # Version rubis
-set :rbenv_ruby, '3.0.1'
+set :rbenv_ruby, '3.0.2'
 set :rbenv_type, :system
 # Le niveau de journalisation à sortir. Si vous voulez voir le journal des erreurs en détail, définissez-le sur: debug.
 # 本番環境用のものであれば、 :info程度が普通。
